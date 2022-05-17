@@ -1,0 +1,107 @@
+﻿.modalBackground {
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(200, 200, 200, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	z-index: 3;
+}
+
+.modalContainer {
+	max-width: calc(100% - 70px);
+	border-radius: 12px;
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	display: flex;
+	flex-direction: column;
+	padding: 25px;
+}
+
+.title {
+	display: inline-block;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.title h1 {
+	margin: 0 auto;
+	border-bottom: 1px solid #000;
+	width: 50%;
+}
+
+.titleCloseBtn {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.titleCloseBtn button {
+	background-color: transparent;
+	border: none;
+	font-size: 25px;
+	cursor: pointer;
+}
+
+.body {
+	flex: 50%;
+	margin: 50px;
+}
+
+.bodyInfo {
+	margin-bottom: 30px;
+}
+
+.bodyInfoItem {
+	margin: 0 0 10px 15px;
+}
+
+.bodyInfoKey {
+	font-weight: 500;
+	margin-right: 15px;
+	color: #555;
+}
+
+.bodyInfoValue {
+	font-weight: 300;
+}
+
+.bodyEditInput {
+	border: none;
+	border-bottom: 1px solid black;
+}
+
+.bodyEditInput:focus {
+	outline: none;
+}
+
+.bodyRadioInput {
+	margin-right: 2px;
+}
+
+.bodyRadioInput:nth-child(3) {
+	margin-left: 10px;
+}
+
+.footer {
+	flex: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer button {
+	width: 150px;
+	height: 45px;
+	margin: 10px;
+	border: none;
+	background-color: rgb(29, 155, 240);
+	color: white;
+	border-radius: 8px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+#cancelBtn {
+	background-color: crimson;
+}

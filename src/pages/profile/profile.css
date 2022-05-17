@@ -1,0 +1,133 @@
+﻿.profile {
+	display: flex;
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.profileCenter {
+	flex: 6.5;
+	height: 100vh;
+	border-right: 2px solid #eff3f4;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+
+.profileRightCenterTop {
+	width: 100%;
+	border-left: 2px solid #eff3f4;
+}
+
+.profileCover {
+	height: 200px;
+	position: relative;
+}
+
+.profileCoverImg {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.profileUserImg {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	object-fit: cover;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 40%;
+	border: 3px solid white;
+}
+
+.profileInfo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.profileInfoName {
+	font-size: 30px;
+	margin: 5px;
+}
+
+.profileInfoDesc {
+	font-weight: 300;
+}
+
+.profileHr {
+	margin: 20px 20px 0;
+	width: 90%;
+}
+
+.profileInfoWrapper {
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.profileTitle {
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+
+.profileInfoItem {
+	margin: 0 0 10px 15px;
+}
+
+.profileInfoKey {
+	font-weight: 500;
+	margin-right: 15px;
+	color: #555;
+}
+
+.profileInfoValue {
+	font-weight: 300;
+}
+
+.profileButton {
+	margin: 10px;
+	border: none;
+	background-color: #1872f2;
+	color: white;
+	border-radius: 5px;
+	padding: 5px 10px;
+	font-size: 16px;
+	font-weight: 500;
+	cursor: pointer;
+	height: 40px;
+}
+
+.profileFollow {
+	border-left: 2px solid #eff3f4;
+}
+
+.profileFollowButton {
+	margin: 0 20px;
+	border: none;
+	background-color: #1872f2;
+	color: white;
+	border-radius: 5px;
+	padding: 5px 10px;
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.profileFollowButton:focus {
+	outline: none;
+}
+
+.updateUser {
+	position: absolute;
+	display: none;
+	width: 1200px;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.5);
+}

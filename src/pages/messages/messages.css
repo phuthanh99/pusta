@@ -1,0 +1,111 @@
+﻿.messages {
+	display: flex;
+	max-width: 1200px;
+	margin: 0 auto;
+	height: 100vh;
+	position: relative;
+}
+
+.messagesOnline {
+	flex: 4;
+	padding: 10px;
+	border-left: 2px solid #eff3f4;
+	border-right: 2px solid #eff3f4;
+}
+
+.messagesOnlineWrapper {
+	position: relative;
+}
+
+.messagesOnlineTitle {
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.messagesOnlineHr {
+	margin: 10px;
+}
+
+.messagesAddChat {
+	font-weight: bold;
+	font-size: 15px;
+	margin: 10px;
+}
+
+.actived {
+	background-color: #ccc;
+	border-radius: 10px;
+}
+
+.messagesBox {
+	flex: 5.5;
+	padding: 0 10px;
+	border-right: 2px solid #eff3f4;
+}
+
+.messagesBoxWrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
+	height: calc(100vh - 50px);
+	margin: 10px;
+}
+
+.messagesBoxTop {
+	overflow-y: scroll;
+}
+
+.messagesBoxBottom {
+	margin-top: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.messagesBoxInput {
+	width: 80%;
+	height: 90px;
+	padding: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.messagesBoxButton {
+	width: 70px;
+	height: 40px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: teal;
+	color: white;
+	margin-left: 5px;
+}
+
+.noConversationText {
+	position: absolute;
+	top: 10%;
+	font-size: 50px;
+	color: rgb(224, 220, 220);
+	cursor: default;
+}
+
+.messagesModal {
+	display: none;
+	position: absolute;
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+}
+
+.messagesModalCloseBtn {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+.messagesModalCloseBtn button {
+	background-color: transparent;
+	border: none;
+	font-size: 25px;
+	cursor: pointer;
+}

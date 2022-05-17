@@ -1,0 +1,79 @@
+﻿* {
+	margin: 0;
+	font-family: "Roboto", sans-serif;
+}
+html,
+body {
+	height: 100%;
+}
+
+/*  Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+	.sidebar {
+		max-width: 90px;
+	}
+	.sidebarList {
+		align-items: center;
+	}
+	.sidebarListItemText {
+		display: none;
+	}
+
+	.sidebarHide {
+		display: block !important;
+	}
+
+	.sidebarUsername {
+		display: none !important;
+	}
+
+	.rightbar {
+		max-width: 70px;
+	}
+	.rightbarWrapper {
+		display: none;
+	}
+	.registerWrapper {
+		flex-direction: column;
+		height: 80vh !important;
+	}
+	.loginWrapper {
+		flex-direction: column;
+		height: 80vh !important;
+	}
+}
+
+/* Mobile  */
+
+@media (max-width: 739px) {
+	.sidebar {
+		display: none;
+	}
+	.rightbar {
+		display: none;
+	}
+	.shareOptionText {
+		display: none;
+	}
+	.bottomBar {
+		display: block !important;
+	}
+	.messagesBox {
+		display: none;
+	}
+	.messagesModal {
+		display: block !important;
+	}
+	.registerWrapper {
+		flex-direction: column;
+	}
+	.loginWrapper {
+		flex-direction: column;
+	}
+	.registerBox {
+		margin-bottom: 20px;
+	}
+	.loginBox {
+		margin-bottom: 20px;
+	}
+}

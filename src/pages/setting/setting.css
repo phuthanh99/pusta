@@ -1,0 +1,44 @@
+﻿.setting {
+	display: flex;
+	max-width: 1200px;
+	margin: 0 auto;
+	height: 100%;
+	position: relative;
+}
+
+.settingWrapper {
+	flex: 6.5;
+	border-left: 2px solid #eff3f4;
+	border-right: 2px solid #eff3f4;
+}
+
+.settingTitle {
+	margin: 30px;
+}
+
+.settingHr {
+	margin: 20px;
+}
+
+.settingCenter {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+}
+
+.settingBtn {
+	margin: 10px 20px;
+	border: none;
+	background-color: #1872f2;
+	color: white;
+	border-radius: 5px;
+	padding: 5px 10px;
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+	height: 50px;
+}
+
+.logout {
+	background-color: rgb(244, 78, 78);
+}

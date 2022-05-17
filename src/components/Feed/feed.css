@@ -1,0 +1,16 @@
+﻿.feed {
+	flex: 6.5;
+	height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	border-left: 2px solid #eff3f4;
+	border-right: 2px solid #eff3f4;
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+}
+
+.feedWrapper {
+	padding: 20px;
+}
