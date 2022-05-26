@@ -24,7 +24,7 @@ export default function Messages() {
 	const { user } = useContext(AuthContext);
 
 	useEffect(() => {
-		socket.current = io("ws://localhost:8000");
+		socket.current = io("https://api-social-pusta.herokuapp.com/");
 		socket.current.on("getMessage", (data) => {
 			setArrivalMessage({
 				sender: data.senderId,

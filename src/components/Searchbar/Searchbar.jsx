@@ -70,7 +70,11 @@ export default function SearchBar({ user, chat }) {
 			<>
 				{!searchFriend[0]?.notFound ? (
 					searchFriend.map((s, i) => (
-						<li className="searchFriendItem" key={i}>
+						<li
+							className="searchFriendItem"
+							key={i}
+							onClick={() => createChat(s._id)}
+						>
 							<img
 								src={
 									s.profilePicture
@@ -79,7 +83,6 @@ export default function SearchBar({ user, chat }) {
 								}
 								alt="profile"
 								className="searchFriendItemImg"
-								onClick={() => createChat(s._id)}
 							/>
 							<span className="searchFriendItemUsername">{s.username}</span>
 						</li>

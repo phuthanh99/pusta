@@ -1,6 +1,6 @@
 ﻿import "./post.css";
 import { MoreVert, Send, Close } from "@mui/icons-material";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, useRef } from "react";
 import { format } from "timeago.js";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router";
@@ -18,7 +18,7 @@ export default function Post({ post }) {
 	const [openCommentBox, setOpenCommentBox] = useState(false);
 	const [user, setUser] = useState({});
 	const [commentPost, setCommentPost] = useState(null);
-	const [newComment, setNewComment] = useState("");
+	const newComment = useRef();
 
 	const [updatePost, setUpdatePost] = useState(false);
 	const [deletePostBox, setDeletePostBox] = useState(false);
@@ -83,20 +83,18 @@ export default function Post({ post }) {
 
 		const comment = {
 			sender: currentUser._id,
-			text: newComment,
+			text: newComment.current.value,
 			postId: post._id,
 		};
 
 		try {
 			const res = await axiosInstance.post("/comment", comment);
 			setCommentPost([...commentPost, res.data]);
-			setNewComment("");
+			console.log(newComment);
 		} catch (err) {
 			console.log(err);
 		}
 	};
-
-	console.log(username);
 
 	const editPost = () => {
 		setUpdatePost(true);
@@ -227,12 +225,12 @@ export default function Post({ post }) {
 							{commentPost.map((c) => (
 								<Comment key={c._id} user={user} comment={c} />
 							))}
-							<form className="postCommentsBottom">
+							<form className="postCommentsBottom" onSubmit={sendComment}>
 								<img
 									className="postProfileImg"
 									src={
-										user.profilePicture
-											? user.profilePicture
+										currentUser.profilePicture
+											? currentUser.profilePicture
 											: PF + "person/noAvatar.gif"
 									}
 									alt="profilePicture"
@@ -240,11 +238,8 @@ export default function Post({ post }) {
 								<input
 									type="text"
 									className="postCommentsBottomInput"
-									placeholder="Write comments"
-									onChange={(e) => {
-										setNewComment(e.target.value);
-									}}
-									value={newComment}
+									placeholder="Write comments..."
+									ref={newComment}
 								/>
 								<Send className="postCommentSend" onClick={sendComment} />
 							</form>
